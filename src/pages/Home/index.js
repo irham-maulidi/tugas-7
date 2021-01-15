@@ -44,12 +44,12 @@ export default class Home extends Component {
         //             style: "cancel"
         //         },
         //         {
-                    // text: "OK", onPress: () => {
-                        FIREBASE.database()
-                            .ref('Karyawan/' + id)
-                            .remove()
-                            .then((data)=> console.log("Berhasil dihapus!"))
-                        this.ambilData();
+        // text: "OK", onPress: () => {
+        FIREBASE.database()
+            .ref('Karyawan/' + id)
+            .remove()
+            .then((data) => console.log("Berhasil dihapus!"))
+        this.ambilData();
         //                 Alert.alert('Hapus', 'Sukses Hapus Data');
         //             },
         //         },
@@ -79,7 +79,7 @@ export default class Home extends Component {
 
                 <View style={styles.wrapperButton}>
                     <TouchableOpacity style={styles.btnTambah} onPress={() => this.props.navigation.navigate('TambahKaryawan')}>
-                    <Ionicons name="md-add" size={25} color="green" /> 
+                        <Ionicons name="md-add" size={25} color="green" />
                     </TouchableOpacity>
                 </View>
             </View>
